@@ -43,7 +43,7 @@ def post():
                 first_name = form.first_name.data,
                 last_name = form.last_name.data,
                 title=form.title.data,
-                content = form.content.data
+                content = form.content.data,
              
             )
         db.session.add(postData)
@@ -51,7 +51,7 @@ def post():
         return redirect(url_for('home'))
     else:
         print(form.errors)
-    return render_templates('post.html',title='Post',form=form)
+    return render_template('post.html',title='Post',form=form)
 
 
 
