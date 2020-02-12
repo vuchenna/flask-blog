@@ -1,10 +1,11 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired, Length
 
 class PostForm(FlaskForm):
     first_name = StringField('First Name',
             validators=[
-                Datarequired(),
+                DataRequired(),
                 Length(min=4, max=30)
                 ]
             )
